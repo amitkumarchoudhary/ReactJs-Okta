@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from '../../reactokta/src/component/layout/navbar.js';
 import Home from '../../reactokta/src/component/pages/home.js';
-import Staff from '../../reactokta/src/component/pages/staff.js';
+import Staff from '../../reactokta/src/component/pages/staffconnect';
 import Login from '../../reactokta/src/component/auth/login.js';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
-
+import Contact from '../src/component/contact/contact.js';
+import {Provider} from 'react-redux';
+import store from '../src/store/index.js';
+import UserForm from '../../reactokta/src/component/common/form/userconnect.js';
+import history from '../../reactokta/src/router/history.js';
+import Uploadfile from '../../reactokta/src/component/common/form/uploadfileconnect.js';
 
 function onAuthRequired({ history }) {
   history.push('/login');
@@ -15,7 +20,8 @@ function onAuthRequired({ history }) {
 class App extends Component {
   render() {
     return (
-       <Router>
+      <Provider store={store}>
+       <Router history={history}>
         <Security
           issuer='https://dev-992767.oktapreview.com/oauth2/default'
           client_id='0oagxbwv58C2uWaQh0h7'
@@ -34,10 +40,17 @@ class App extends Component {
                 )}
               />
               <Route path="/implicit/callback" component={ImplicitCallback} />
+              <Route path="/contact"  component={Contact} />
+              <Route path="/form"  component={UserForm} />
+              <Route path="/uploadfile"  component={Uploadfile} />
+              
+
+              
              
           </div>  
           </Security>
       </Router>
+      </Provider>
     );
   }
 }

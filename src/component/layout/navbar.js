@@ -29,6 +29,17 @@ class Navbar extends Component {
                   Staff
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/contact">
+                  Contact
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="nav-link" to="/form">
+                  UserForm
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

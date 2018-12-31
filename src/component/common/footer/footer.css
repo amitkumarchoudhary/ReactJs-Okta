@@ -1,0 +1,15 @@
+
+
+.pannelfooter{
+  background-color:teal;
+    color: #ffffff;
+    padding: 15px;
+    /*margin-bottom:100px;*/
+    height: 50px;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
