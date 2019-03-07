@@ -1,0 +1,29 @@
+.nav1 {
+    /*background-color: grey;*/
+    height: 80px;
+    width: 800px;
+}
+
+.ul1 {
+    list-style: none;
+    float: left;
+    margin: 0;
+}
+
+.li1 {
+    /*float: right;
+    width: 10px;
+    line-height: 80px;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: 40px;*/
+}
+
+.nav1 li1 a1 {
+    width: 100px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.span1{
+    margin-left: 50px;
+}

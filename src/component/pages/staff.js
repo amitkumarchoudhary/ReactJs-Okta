@@ -6,11 +6,15 @@ import Menu from '../common/menu/menu.js';
 import Usertable from '../common/table/user_table.js';
 import Footer from '../common/footer/footer.js';
 
+import {Pagination,Pager} from 'react-bootstrap';
+
 class Staff extends Component {
   constructor(props){
      super(props);
      this.state={
-        actualData :this.props.nameList
+        actualData :this.props.nameList,
+        currentUserName : '',
+        currentUserEmail:''
      }
     //  this.delteUser=this.delteUser.bind(this);
     this.exportData=this.exportData.bind(this);
@@ -21,6 +25,13 @@ class Staff extends Component {
 
   componentDidMount(){
    this.props.fetchData();  
+   const idToken=JSON.parse(localStorage.getItem('okta-token-storage'));
+   this.setState({
+        currentUserEmail: idToken.idToken.claims.email,
+        currentUserName: idToken.idToken.claims.name
+
+     
+   })
  }
 
  exportData(id){
@@ -48,11 +59,12 @@ class Staff extends Component {
  }
 
   render() {
+    const buttonIcon=true;
       const sidebar = (
             this.props.nameList.map((userData,index) =>
-            <div style={{ height:"90px"}}>
+            <div style={{ height:"80px"}}>
               
-              <Usertable data={{userData}}/>
+              <Usertable data={{userData}} deleteData={this.props.deleteData} dataShow={{buttonIcon}}/>
            
             </div>
             )
@@ -63,6 +75,14 @@ class Staff extends Component {
         <Menu/>
         <div className="pannel">
         {sidebar}
+        
+           
+        </div>
+        <div style={{marginLeft:"400px"}}>
+        <Pager>
+              <Pager.Item href="#">Previous</Pager.Item>{' '}
+              <Pager.Item href="#">Next</Pager.Item>
+        </Pager>
         </div>
         <Footer/>
        </div>

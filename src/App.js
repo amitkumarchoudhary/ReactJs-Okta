@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from '../../reactokta/src/component/layout/navbar.js';
+import Navbar from '../../reactokta/src/component/layout/navbarconnect.js';
 import Home from '../../reactokta/src/component/pages/home.js';
 import Staff from '../../reactokta/src/component/pages/staffconnect';
 import Login from '../../reactokta/src/component/auth/login.js';
@@ -12,6 +12,8 @@ import store from '../src/store/index.js';
 import UserForm from '../../reactokta/src/component/common/form/userconnect.js';
 import history from '../../reactokta/src/router/history.js';
 import Uploadfile from '../../reactokta/src/component/common/form/uploadfileconnect.js';
+import FilterSearchView from '../../reactokta/src/component/common/filter/index.js';
+import FilterUserView from'../../reactokta/src/component/views/common/filterUser/index.js';
 
 function onAuthRequired({ history }) {
   history.push('/login');
@@ -26,6 +28,7 @@ class App extends Component {
           issuer='https://dev-992767.oktapreview.com/oauth2/default'
           client_id='0oagxbwv58C2uWaQh0h7'
           redirect_uri={window.location.origin + '/implicit/callback'}
+          scope={['openid', 'email', 'profile']}
           onAuthRequired={onAuthRequired}
         >
           <div className="App">
@@ -43,6 +46,10 @@ class App extends Component {
               <Route path="/contact"  component={Contact} />
               <Route path="/form"  component={UserForm} />
               <Route path="/uploadfile"  component={Uploadfile} />
+              <Route path="/filter"  component={FilterSearchView} />
+              <Route path="/userfilter"  component={FilterUserView} />
+
+              
               
 
               

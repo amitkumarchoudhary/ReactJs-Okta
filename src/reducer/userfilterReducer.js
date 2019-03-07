@@ -1,5 +1,5 @@
 import {
-    SAVE_USER_FORM_DATA
+   USER_FILTER_FETCH_ALL_DATA
 } from '../actions.js';
 
 
@@ -12,14 +12,24 @@ const INITIAL_STATE=[{
 
 }]
 
- export default function saveLoginReducer(state ={INITIAL_STATE}, action) {
+ export default function getUserFilterReducer(state ={INITIAL_STATE}, action) {
   switch (action.type) {
-    case "SAVE_USER_FORM_DATA":
+    case "USER_FILTER_FETCH_ALL_DATA":
       return({
           ...state,
           INITIAL_STATE : action.payload
-      }) 
+      })
+
+      case "USER_FILTER_FETCH_DATA_BY_SELECTION":
+      return({
+          ...state,
+          INITIAL_STATE : action.payload
+      })
+
+
+
       
+  
     default:
       return state
   }

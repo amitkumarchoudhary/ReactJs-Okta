@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
+
+  componentDidMount(){
+    let id=1;
+   this.props.fetchUserPermission(id);
+ }
+
   render() {
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
@@ -38,6 +44,17 @@ class Navbar extends Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/form">
                   UserForm
+                </Link>
+              </li>
+               <li className="nav-item">
+                <Link className="nav-link" to="/filter">
+                  Search
+                </Link>
+              </li>
+
+               <li className="nav-item">
+                <Link className="nav-link" to="/userfilter">
+                  UserFilter
                 </Link>
               </li>
             </ul>

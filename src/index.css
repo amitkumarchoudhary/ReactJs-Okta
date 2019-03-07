@@ -59,12 +59,36 @@ code {
 }
 
 .pannel{
-    margin-top: -195px;
+    margin-top: -205px;
     bottom: 0px;
     background-color: aquamarine;
     width: 950px;
-    height: 480px;
+    height: 400px;
     margin-left: 320px;
+    overflow:auto;
+
+
+}
+
+.container2{
+    margin-top: 40px;
+    bottom: 0px;
+    background-color: aquamarine;
+    width: 950px;
+    height: 420px;
+    margin-left: 200px;
+    overflow:auto;
+
+
+}
+
+.container3{
+    margin-top: 130px;
+    bottom: 0px;
+    background-color: aquamarine;
+    width: 950px;
+    height: 320px;
+    margin-left: 60px;
     overflow:auto;
 
 

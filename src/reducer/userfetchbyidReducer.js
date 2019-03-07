@@ -1,5 +1,6 @@
 import {
-    SAVE_USER_FORM_DATA
+    USER_FETCH_DATA_BYID,
+    USER_FETCH_ALL_DATA_BYID
 } from '../actions.js';
 
 
@@ -12,13 +13,22 @@ const INITIAL_STATE=[{
 
 }]
 
- export default function saveLoginReducer(state ={INITIAL_STATE}, action) {
+ export default function getUserByIDReducer(state ={INITIAL_STATE}, action) {
   switch (action.type) {
-    case "SAVE_USER_FORM_DATA":
+    case "USER_FETCH_DATA_BYID":
       return({
           ...state,
           INITIAL_STATE : action.payload
-      }) 
+      })
+
+      case "USER_FETCH_ALL_DATA_BYID":
+      return({
+          ...state,
+          INITIAL_STATE : action.payload
+      })
+
+
+       
       
     default:
       return state

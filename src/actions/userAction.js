@@ -6,10 +6,10 @@ import {
 import axios from "axios";
 
 export function getUserDetailsAction() {
-
+const idToken=JSON.parse(localStorage.getItem('okta-token-storage'));
 return (dispatch)=> {
 
-         axios.get('http://localhost:9090/getAllEmployeeDetails')
+         axios.get('http://localhost:9090/employee/details')
         .then((response) => {
          dispatch({type: "USER_FETCH_DATA", payload: response.data});
         }).catch((error) => {
@@ -22,12 +22,22 @@ return (dispatch)=> {
 }
 
 export function deleteUserDetailsAction(id) {
-let data=id;
+
+
+const dataBy  =  {
+        id,     
+    };
+    const requestOptions = {
+        body: JSON.stringify(dataBy),
+        method: 'POST'
+    };  
+const idToken=JSON.parse(localStorage.getItem('okta-token-storage'));
+let dataId=id;
 return (dispatch)=> {
 
          axios.delete('http://localhost:9090/deleteEmployeeDetails/'+id)
          .then((response) => {
-        dispatch({type: "DELETE_FETCH_DATA", payload: response.id})
+        dispatch({type: "DELETE_FETCH_DATA", payload: response.data})
         .then(response => {
         dispatch(getUserDetailsAction())
       })

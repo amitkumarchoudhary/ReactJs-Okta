@@ -7,14 +7,17 @@
     "@okta/okta-react": "^1.1.4",
     "@okta/okta-signin-widget": "^2.13.0",
     "axios": "^0.18.0",
+    "bootstrap": "^4.2.1",
     "react": "^16.5.2",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
     "redux": "^4.0.0",
-    "redux-thunk": "^1.0.3"
+    "redux-thunk": "^1.0.3",
+    "tcomb": "^3.2.29"
   },
   "scripts": {
     "start": "react-scripts start",
