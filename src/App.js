@@ -4,7 +4,7 @@ import Navbar from '../../reactokta/src/component/layout/navbarconnect.js';
 import Home from '../../reactokta/src/component/pages/home.js';
 import Staff from '../../reactokta/src/component/pages/staffconnect';
 import Login from '../../reactokta/src/component/auth/login.js';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
 import Contact from '../src/component/contact/contact.js';
 import {Provider} from 'react-redux';
@@ -14,6 +14,7 @@ import history from '../../reactokta/src/router/history.js';
 import Uploadfile from '../../reactokta/src/component/common/form/uploadfileconnect.js';
 import FilterSearchView from '../../reactokta/src/component/common/filter/index.js';
 import FilterUserView from'../../reactokta/src/component/views/common/filterUser/index.js';
+import RegionView from '../../reactokta/src/component/views/common/region/regionView';
 
 function onAuthRequired({ history }) {
   history.push('/login');

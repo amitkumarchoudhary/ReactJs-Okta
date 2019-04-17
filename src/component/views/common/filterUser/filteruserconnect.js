@@ -1,10 +1,10 @@
 import {connect} from 'react-redux';
-import {fetchUserByAllIdAction,fetchUserFilterDataAction} from '../../../../actions/userfilteraction.js';
+import {fetchUserByAllIdAction,fetchUserFilterDataAction , fetchRegionAction} from '../../../../actions/userfilteraction.js';
 import FilterUserView from './filterUserView.js'
 
 function mapStateToProps(state) {
     return{
-        fetchUserByIdData : state.userfetchbyidReducer.INITIAL_STATE,
+        // fetchUserByIdData : state.userfetchbyidReducer.INITIAL_STATE,
         fetchfilterAllReducer : state.userfilterAllReducer.INITIAL_STATE
     }
    
@@ -18,8 +18,12 @@ function mapDispatchToProps(dispatch) {
       },
       fetchUserBySelectionData : (selectfilterdata)=>{
           dispatch(fetchUserFilterDataAction(selectfilterdata))
+      },
+      fetchRegionData : ()=> {
+          dispatch(fetchRegionAction())
       }
 
+      
 
    })
 
