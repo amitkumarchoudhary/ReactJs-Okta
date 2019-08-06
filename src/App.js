@@ -37,6 +37,11 @@ class App extends Component {
             
               <Route path="/" exact={true} component={Home} />
               <SecureRoute path="/staff" exact={true} component={Staff} />
+              
+              <SecureRoute path="/form" exact={true} component={UserForm} />
+              <SecureRoute path="/contact" exact={true} component={Contact} />
+              <SecureRoute path="/filter" exact={true} component={FilterSearchView} />
+              <SecureRoute path="/userfilter" exact={true} component={FilterUserView} />
                <Route
                 path="/login"
                 render={() => (
@@ -44,11 +49,11 @@ class App extends Component {
                 )}
               />
               <Route path="/implicit/callback" component={ImplicitCallback} />
-              <Route path="/contact"  component={Contact} />
+              {/*<Route path="/contact"  component={Contact} />
               <Route path="/form"  component={UserForm} />
               <Route path="/uploadfile"  component={Uploadfile} />
               <Route path="/filter"  component={FilterSearchView} />
-              <Route path="/userfilter"  component={FilterUserView} />
+              <Route path="/userfilter"  component={FilterUserView} />*/}
 
               
               
