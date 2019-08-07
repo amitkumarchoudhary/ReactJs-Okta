@@ -15,6 +15,7 @@ import Uploadfile from '../src/component/common/form/uploadfileconnect.js';
 import FilterSearchView from '../src/component/common/filter/index.js';
 import FilterUserView from'../src/component/views/common/filterUser/index.js';
 import RegionView from '../src/component/views/common/region/regionView';
+import MainView from '../src/component/views/common/maincontent/main_view.js';
 
 function onAuthRequired({ history }) {
   history.push('/login');
@@ -33,11 +34,12 @@ class App extends Component {
           onAuthRequired={onAuthRequired}
         >
           <div className="App">
-            <Navbar />
+            <Navbar data={0} />
+            {/*<MainView />*/}
             
               <Route path="/" exact={true} component={Home} />
               <SecureRoute path="/staff" exact={true} component={Staff} />
-              
+              {/*<SecureRoute path="/mainview" exact={true} component={MainView} />*/}
               <SecureRoute path="/form" exact={true} component={UserForm} />
               <SecureRoute path="/contact" exact={true} component={Contact} />
               <SecureRoute path="/filter" exact={true} component={FilterSearchView} />

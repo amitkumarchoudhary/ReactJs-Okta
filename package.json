@@ -6,8 +6,9 @@
     "@okta/okta-auth-js": "^2.0.1",
     "@okta/okta-react": "^1.1.4",
     "@okta/okta-signin-widget": "^2.13.0",
+    "@react-pdf/renderer": "^1.6.3",
     "axios": "^0.18.0",
-    "bootstrap": "^4.2.1",
+    "bootstrap": "^4.3.1",
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
@@ -18,6 +19,7 @@
     "react-test-renderer": "^16.8.6",
     "redux": "^4.0.0",
     "redux-thunk": "^1.0.3",
+    "styled-components": "^4.3.2",
     "tcomb": "^3.2.29"
   },
   "scripts": {

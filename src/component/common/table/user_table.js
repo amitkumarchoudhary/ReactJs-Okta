@@ -1,9 +1,19 @@
 import React from 'react';
 import Custombutton from '../button/custombutton.js';
+import Usermodelview from '../../views/common/usermodelview/user_model_view.js';
  function Usertable(props){
-    const data =props.data.userData;
+     const data =props.data.userData;
      const dpt =props.data.userData.department_id;
      const buttonIcon =props.dataShow.buttonIcon;
+     let popUp=false;
+     
+
+     function handleClick(e) {
+      e.preventDefault();
+      // <Usermodelview usermodel={true}/>
+      return data;
+    
+    }
     
     // var department_id = data.department_id.map(function(department_id) {
     //                 return (
@@ -83,10 +93,12 @@ import Custombutton from '../button/custombutton.js';
 
     return (
        <div style={{marginTop:"10px"}}>
+         <Usermodelview usermodel={true}/>
        <ul className="a" key={data.id} style={{listStyleType: "none"}}>  
        <li>
                  <td style={{width:"700px",height:"auto"}}> 
-                        <strong><i>{data.employee_id} </i></strong>    
+                        <a href="" onClick={handleClick} value={data.employee_id}><strong><i>{data.employee_id} </i></strong></a>
+                        {/*<Usermodelview dataShow={data.employee_id}/>    */}
                         <span>{data.first_name}   </span>
                         <span>{data.salary}  </span>    
                         <strong><span>{data.email}  </span></strong>
