@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`My first snapshot test demo 1 testing app button demo 1`] = `
+<div>
+  <button>
+    Show 1
+  </button>
+</div>
+`;
+
+exports[`My first snapshot test demo2 testing app button 1`] = `
+<div>
+  <button>
+    Show 2
+  </button>
+</div>
+`;

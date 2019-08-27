@@ -1,0 +1,40 @@
+{
+  "name": "reactokta",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@okta/okta-auth-js": "^2.0.1",
+    "@okta/okta-react": "^1.1.4",
+    "@okta/okta-signin-widget": "^2.13.0",
+    "@react-pdf/renderer": "^1.6.3",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "react": "^16.5.2",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.5",
+    "react-test-renderer": "^16.8.6",
+    "redux": "^4.0.0",
+    "redux-thunk": "^1.0.3",
+    "styled-components": "^4.3.2",
+    "tcomb": "^3.2.29"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
